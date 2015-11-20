@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import Voting from '../../src/components/Voting';
 import {expect} from 'chai';
@@ -65,7 +66,7 @@ describe("Voting", () => {
 
         expect(buttons.length).to.equal(0);
 
-        const winner = React.findDOMNode(component.refs.winner);
+        const winner = ReactDom.findDOMNode(component.refs.winner);
         expect(winner).to.be.ok;
         expect(winner.textContent).to.contain('Trainspotting');
     });
@@ -80,7 +81,8 @@ describe("Voting", () => {
         expect(firstButton.textContent).to.equal("Trainspotting");
 
         pair[0] = "Sunshine";
-        component.setProps({pair: pair});
+        //component.setProps({pair: pair});
+        ReactDom.render(<Voting pair={pair} />, ReactDom.findDOMNode(component).parentNode);
         firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
         expect(firstButton.textContent).to.equal("Trainspotting");
     });
@@ -95,7 +97,8 @@ describe("Voting", () => {
         expect(firstButton.textContent).to.equal("Trainspotting");
 
         const newPair = pair.set(0, "Sunchine");
-        component.setProps({pair: newPair});
+        //component.setProps({pair: newPair});
+        ReactDom.render(<Voting pair={newPair} />, ReactDom.findDOMNode(component).parentNode);
         firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
         expect(firstButton.textContent).to.equal("Sunchine");
     });
