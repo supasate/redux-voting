@@ -20,7 +20,7 @@ store.dispatch({
 });
 
 const routes = <Route component={App}>
-    <Route path="/results" component={Results} />
+    <Route path="/results" component={ResultsContainer} />
     <Route path="/" component={VotingContainer} />
 </Route>
 
