@@ -11,12 +11,14 @@
   "author": "Supasate Choochaisri",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.2.0",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
+    "css-loader": "^0.23.0",
     "jsdom": "^7.0.2",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "^0.14.3",
@@ -24,6 +26,7 @@
     "redux-devtools": "^3.0.0-beta-3",
     "redux-devtools-dock-monitor": "^1.0.0-beta-3",
     "redux-devtools-log-monitor": "^1.0.0-beta-3",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.6",
     "webpack-dev-server": "^1.12.1"
   },
@@ -34,6 +37,7 @@
     ]
   },
   "dependencies": {
+    "classnames": "^2.2.0",
     "history": "^1.13.1",
     "immutable": "^3.7.5",
     "react": "^0.14.3",
